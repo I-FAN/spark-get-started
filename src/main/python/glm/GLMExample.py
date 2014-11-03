@@ -31,7 +31,7 @@ def mapper(line):
 sc = getSparkContext()
 
 # Load and parse the data
-data = sc.textFile("/Users/stuart/git/spark-get-started/src/main/resources/glm/data_banknote_authentication.txt")
+data = sc.textFile("../../resources/glm/data_banknote_authentication.txt")
 parsedData = data.map(mapper)
 
 # Train model

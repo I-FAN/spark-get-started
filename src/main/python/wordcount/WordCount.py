@@ -3,8 +3,8 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("WordCount")
 sc = SparkContext(conf = conf)
 
-inFile = "/Users/stuart/git/spark-get-started/src/main/resources/shakespeare.txt"
-outFile = "/Users/stuart/git/spark-get-started/src/main/resources/shakespeare.counts"
+inFile = "../../resources/wordcount/shakespeare.txt"
+outFile = "./counts"
 
 # WordCount on shakespeare using map and reduce
 shakespeare = sc.textFile(inFile)
